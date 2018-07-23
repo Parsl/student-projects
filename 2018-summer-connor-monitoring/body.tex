@@ -1,0 +1,34 @@
+The work in this paper was performed according to a simple strategy.
+First, from within the Parsl source code, capture important information.
+%\textcolor{red}{I don't understand the previous - maybe the grammar needs fixing?}
+%\textcolor{blue}{I believe something like this is what I was trying to say.}
+Second, store these logs to a central location that a user can access.
+Finally, present the information in these logs using a dashboard accessible to a user.
+%\textcolor{red}{maybe: present the information in these logs using a dashboard accessible to a user}
+%\textcolor{blue}{I agree}
+The particular source logging implementation uses the Python logging handler CMRESHandler.
+An Elasticsearch instance is used for central log storage.
+Finally, a Kibana dashboard was chosen for the UI.
+The benefit of these options is that they allow simple solution development and provide the core functionality out-of-the-box.
+The downside of these options is that they are not trivial to distribute to users and customization can be limited.
+
+Specifically, information about the status and resource usage is generated from the Parsl source code during execution.
+This information is then collected on a central Elasticsearch instance \footnote{Since Elasticsearch is a distributed database, information only needs to be sent to a single node and then is propagated by Elasticsearch itself.}
+This Elasticsearch instance is then exposed to a Kibana instance.
+Kibana hosts the dashboards that present the information to users; they are live and interactive.
+Because these instances only require a simple connection, the services may be run from arbitrary systems and only require a user to have access to the Kibana instance in order to monitor the Parsl workflow.
+
+Kibana and Elasticsearch are full tools in their own right and leave plenty of opportunity for this solution to be expanded by the Parsl team or customized by the users running these services.
+In order to provide a default that satisfies the majority of users, a generic Kibana dashboard template and Elasticsearch ``schema'' \footnote{Elasticsearch is flexible and does not require a traditional database schema to function. However, to provide smooth interactions with Kibana a ``schema'' in the form of an index pattern is provided by creating dummy entries that follow the prescribed pattern during the setup process.} are provided for use during the initial setup.
+
+The information and visualizations are not unique and could readily be reproduced using online resources and an understanding of any database and visualization tools.
+The information generation within Parsl is the component of interest.
+Information is primarily collected in two distinct places, by the task scheduler and by the task executioners (workers).
+The scope of the task scheduler includes information of overall workflow status and all scheduling events.
+During each of the scheduling events, useful information is packaged into a log that is sent to Elasticsearch.
+This log packaging follows a prescribed pattern in order to smoothly interact with Kibana visualization tools.
+On the task executioner, a new process is spawned that monitors the resource usage of the specific running task.
+Again, the information is packaged solely for visualization purposes, as Elasticsearch is capable of storing arbitrary and flexible entries.
+
+The solution was developed by iteratively adding logging statements to the code and then crafting visuals for the new information.
+This was an efficient way to increase presented information while keeping each addition simple.
