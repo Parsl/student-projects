@@ -1,0 +1,34 @@
+%TO-DO: should probably add a citation for scientific workflow systems and their demand
+Modern scientific practices increasingly incorporate computational elements into their processes.
+For computational science, these elements almost entirely make up any given process.
+The consistent increase in the significance and abundance of computational elements drives the development of computational tools.
+One such tool for the modern scientist is workflow software.
+This type of software allows the definition and execution of a series of computational elements.
+Users benefit from using workflow software by automating their task execution, documenting the steps taken in their process, and empowering themselves with the additional features the software may include, such as scheduling the tasks in an efficient manner.
+
+The motivation for the use and development of such software is clear.
+%TO-DO: Workflow software usage is not ubiquitous.
+Workflow systems have the potential to bring the full power of the current state of computational resources to the users by optimizing the scheduling and execution of computational workflow tasks.
+Nevertheless, workflow software is not always simple and convenient which may be deterring users.
+The Parsl project attempts to address these issues.
+
+Parsl is a library for defining a workflow in Python \cite{babuji_yadu_2017_853492}.
+Offering a workflow system as a library to a common scripting language greatly reduces the cost to users - providing a familiar interface for defining and executing workflows.
+Parsl greatly enhances the composition and execution of arbitrary workflows in the following ways.
+The tasks that are composed into the workflow are dynamically scheduled in parallel, according to their dependencies.
+Parsl workflow definitions are independent of site resources, allowing Parsl to define task execution for many or arbitrary environments.
+These basic properties of Parsl empower users to conveniently define and execute tasks that would otherwise create complicated bottlenecks in a modern research workflow.
+The motivation for Parsl development is clear, to enable the relatively simple definition and execution of arbitrary workflows such that users can increase productivity.
+In order to facilitate the adoption and use of Parsl, additional features are included alongside the core functionality.
+These features have included Globus file staging, simple configurations, simple installations, multi-site configurations, and others.
+%TO-DO: Probably fix this sentence
+Monitoring is also an important feature for Parsl users, though as of the start of this project, it was not provided.
+
+Adding monitoring to any workflow system allows users the ability to audit, debug, and confirm the execution of their workflow.
+This specific feature in Parsl will benefit current users and attract new users.
+The goal of this work is to provide a monitoring interface that logs task execution and resource usage activity, and provides it via a simple user interface.
+The solution path for this feature has been to implement logging and visualization using the open source tools Elasticsearch and Kibana \cite{ElasticsearchKibana}.
+%TO-DO: add citations for these projects
+
+This paper presents the details of the requirements to monitor a complete workflow and the viability of using Elasticsearch and Kibana in such a solution.
+The details of the solution and the development process of implementing workflow monitoring follow.
