@@ -10,6 +10,6 @@ To go through a whole procedure of how my code works, here are the steps.
 ## How to utilize this repository
 1. `generator.py` is used to produce a CWL workflow, assuming a monitoring.db exists in the same directory as it does. 
 2. Instructions to successfully run `generator.py`:
- a. Modify the script where `clts` is defined. You need to specify the cwl_CommandLineTools so that they do the same thing as bash_apps.
- b. Run the command `python3 generator.py`.
+>a. Modify the script where `clts` is defined. You need to specify the cwl_CommandLineTools so that they do the same thing as bash_apps.
+>b. Run the command `python3 generator.py`.
 
