@@ -9,5 +9,7 @@ To go through a whole procedure of how my code works, here are the steps.
 4. To run the CWL workflow, type `cwl-runner auto_workflow.cwl auto_workflow.yml`.
 ## How to utilize this repository
 1. `generator.py` is used to produce a CWL workflow, assuming a monitoring.db exists in the same directory as it does. 
-2. To successfully run `generator.py`, you need to modify the script where `clt` is defined. You need to specify the cwl_CommandLineTools in the way that they do the same thing as bash_apps.
-3. To run the CWL workflow, you need to write the CWL CommandLineTools as a `*.cwl` file so that when the workflow calls it, no error pops up.
+2. Instructions to successfully run `generator.py`:
+ 1) Modify the script where `clts` is defined. You need to specify the cwl_CommandLineTools so that they do the same thing as bash_apps.
+ 2) Run the command `python3 generator.py`.
+
