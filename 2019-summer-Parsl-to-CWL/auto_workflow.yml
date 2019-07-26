@@ -1,0 +1,20 @@
+input_0: 
+  class: File
+  path: echo1.sh
+input_1: file1.txt
+input_2: 
+  class: File
+  path: echo2.sh
+input_3: Next
+input_4: College
+input_5: Student
+input_6: Athlete
+input_7: file2.txt
+input_8:
+  class: File
+  path: texts.tar
+input_9: 1.txt
+input_10: 2.txt
+input_11: NCSA.txt
+input_12: SPIN.txt
+input_13: Result.txt
