@@ -7,4 +7,4 @@ Contents:
 * [Work by Yuhang Ren in Summer 2019 to demonstrate building a CWL workflow that captures the execution of a Parsl program](2019-summer-Parsl-to-CWL)
 
 External:
-* [Project EEPS by Ved Kommalapati and Ananth Hariharan in Summer 2021 to display information about how nodes impact runtime, cost, and efficiency.](https://github.com/kommav/Parsl-Project)
+* [Project EEPS by Ved Kommalapati and Ananth Hariharan in Summer 2021 to display information about how nodes impact runtime, cost, and efficiency.](https://github.com/kommav/EEPS)
