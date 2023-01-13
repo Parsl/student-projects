@@ -8,3 +8,5 @@ Contents:
 
 External:
 * [Project EEPS by Ved Kommalapati and Ananth Hariharan in Summer 2021 to display information about how workers impact runtime, cost, and efficiency.](https://github.com/kommav/EEPS)
+
+Code in these repositories is licenced as Apache-2.0 and other materials are licensed as CC-BY, unless otherwise indicated.
