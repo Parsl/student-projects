@@ -12,4 +12,5 @@ Code in these repositories is licenced as Apache-2.0 and other materials are lic
 External Repositories:
 * [Project EEPS by Ved Kommalapati and Ananth Hariharan in Summer 2021 to display information about how workers impact runtime, cost, and efficiency.](https://github.com/kommav/EEPS)
 * [Work by Sohit Miglani to illustrate parallel patterns in Parsl](https://github.com/Parsl/parallel_patterns)
-* [Sohit Miglani's implementation of Mosiac in Parsl](https://github.com/Parsl/parallel_patterns)
+* [Sohit Miglani's implementation of Mosaic in Parsl](https://github.com/Parsl/parallel_patterns)
+* [Monica Lewis implementation of Aalist workflow patterns in Parsl](https://github.com/Parsl/parsl/pull/14)
