@@ -14,4 +14,4 @@ External Repositories:
 * [Work by Sohit Miglani to illustrate parallel patterns in Parsl](https://github.com/Parsl/parallel_patterns)
 * [Sohit Miglani's implementation of Mosaic in Parsl](https://github.com/Parsl/parallel_patterns)
 * [Monica Lewis implementation of Aalist workflow patterns in Parsl](https://github.com/Parsl/parsl/pull/14)
-* [Work by Alejandro Duque in the summer of 20223 to demonstrate the process of translating a WDL workflow into Parsl](https://github.com/grimloc-aduque/Phyloflow-Parsl-Implementation)
+* [Work by Alejandro Duque in the summer of 2023 to demonstrate the process of translating a WDL workflow into Parsl](https://github.com/grimloc-aduque/Phyloflow-Parsl-Implementation)
